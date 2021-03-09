@@ -14,6 +14,10 @@ const seconds = date.getSeconds()
 
 const dateformat =  `${dayzero}/${monthzero}/${year}\n ás ${hours}:${minutes}:${seconds}`;
 
+// iniciar 
+localStorage.get('date', 'Você ainda não fez anotações')
+localStorage.get('button', 'Adicionar')
+
 // Essa função irá carregar todo o conteúdo presente no localstorage.
 function renderNote() {
     // Renderizar as anotações do usuário
