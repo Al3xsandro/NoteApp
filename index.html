@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas anotações</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container-home">
+        <h1 class="title">Minhas Anotações</h1>
+        <p>Crie suas anotações gratuitamente em nossa aplicação.</p>
+    </div>
+    <div class="container-content">
+        <form>
+            <p id="container-date">Você ainda não fez anotações</p>
+            <textarea id="note" placeholder="Digite seu texto.."></textarea>
+            <div class="buttons">
+                <button id="button-add" onclick="createNote()">Adicionar</button>
+                <button class="button-remove"onclick="removeNote()">Remover</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
