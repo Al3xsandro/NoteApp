@@ -19,7 +19,7 @@ function renderNote() {
     // Renderizar as anotações do usuário
     const noteElement = localStorage.getItem('note') === null ? localStorage.setItem('note') : localStorage.getItem('note')
     const result = JSON.parse(noteElement);
-    const content = document.getElementById('note').innerHTML= `${result}`;
+    document.getElementById('note').innerHTML= `${result}`;
 
     // Renderizar data
     const data = localStorage.getItem('date')
@@ -27,13 +27,12 @@ function renderNote() {
 
     // Botão editar 
     const button = localStorage.getItem('button')
-    const edit = document.getElementById("button-add").innerHTML = `${button}`
+    document.getElementById("button-add").innerHTML = `${button}`
 }
 
 // essa função irá criar uma nova anotação
 function createNote() {
     // Entradas do usuário
-    const storage = localStorage;
     const note = document.getElementById('note').value;
     localStorage.setItem('note', JSON.stringify(note));
 
@@ -51,16 +50,14 @@ function createNote() {
 
 function removeNote() {
     // Remover anotações
-    localStorage.removeItem('note');
     localStorage.setItem('note', '');
 
     // Remover data 
-    localStorage.removeItem('date');
     localStorage.setItem('date', 'Você ainda não fez anotações.');
 
     // Botão editar 
-    const button = localStorage.removeItem('button')
-    const edit = document.getElementById("button-add").innerHTML = 'Adicionar'
+    localStorage.removeItem('button')
+    document.getElementById("button-add").innerHTML = 'Adicionar'
 }
 
 // Carregar todo o conteúdo na inicialização da aplicação
