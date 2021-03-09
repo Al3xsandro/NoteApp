@@ -1,5 +1,4 @@
 * {
-    max-width: 1440px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -104,14 +103,14 @@ p {
 #button-add {
     padding: 10px;
 
-    background-color: rgb(201, 188, 200);
+    background-color: rgb(204, 204, 204);
     border-radius: 7px;
     border-style: none;
     outline: none;
 }
 
 #button-add:hover {
-    background-color: rgb(203, 195, 240);
+    background-color: rgb(213, 213, 213);
 }
 
 /* Remove button */
@@ -119,7 +118,7 @@ p {
 .button-remove {
     padding: 10px;
 
-    background-color: rgb(201, 188, 200);
+    background-color: rgb(196, 196, 196);
     border-radius: 7px;
     border-style: none;
     outline: none;
@@ -144,5 +143,10 @@ p {
     .container-content textarea {
         width: 280px;
         height: 250px;
+    }
+}
+@media(min-width: 1920px) {
+    html {
+        margin: 200px;
     }
 }

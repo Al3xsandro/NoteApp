@@ -14,14 +14,10 @@ const seconds = date.getSeconds()
 
 const dateformat =  `${dayzero}/${monthzero}/${year}\n ás ${hours}:${minutes}:${seconds}`;
 
-// iniciar 
-localStorage.get('date', 'Você ainda não fez anotações')
-localStorage.get('button', 'Adicionar')
-
 // Essa função irá carregar todo o conteúdo presente no localstorage.
 function renderNote() {
     // Renderizar as anotações do usuário
-    const noteElement = localStorage.getItem('note');
+    const noteElement = localStorage.getItem('note') === null ? localStorage.setItem('note') : localStorage.getItem('note')
     const result = JSON.parse(noteElement);
     const content = document.getElementById('note').innerHTML= `${result}`;
 
