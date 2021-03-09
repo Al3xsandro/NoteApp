@@ -1,4 +1,4 @@
-# Dropbox Clone UI
+# NoteApp
 Aplicativo de anotações desenvolvido em html, css e javascript para praticar alguns conceitos que eu aprendi recentemente.
 
 <h3>Tecnologias</h3>
