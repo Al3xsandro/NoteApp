@@ -41,8 +41,7 @@ function createNote() {
     localStorage.setItem('note', JSON.stringify(note));
 
     // data
-    const time = dateformat;
-    localStorage.setItem('date', time)
+    localStorage.setItem('date', dateformat)
 
     // Botão de adicionar
     localStorage.setItem('button', 'Editar')
