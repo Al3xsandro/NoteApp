@@ -5,21 +5,24 @@ const year = date.getFullYear()
 const month = date.getMonth()
 const day = date.getDate()
 
-const dayzero = day < 9 ? '0' + day : day;
-const monthzero = month < 9 ? '0' + month : month;
-
 const minutes = date.getMinutes()
 const hours = date.getHours()
 const seconds = date.getSeconds()
 
-const dateformat =  `${dayzero}/${monthzero}/${year}\n ás ${hours}:${minutes}:${seconds}`;
+// isto vai verificar se o número precisa do zero na frente.
+
+const dayzero = day < 10 ? '0' + day : day;
+const monthzero = month < 10 ? '0' + month : month;
+const hourszero = hours < 10 ? '0' + hours : hours;
+
+const dateformat =  `${dayzero}/${monthzero}/${year}\n ás ${hourszero}:${minutes}:${seconds}`;
 
 // Essa função irá carregar todo o conteúdo presente no localstorage.
 function renderNote() {
     // Renderizar as anotações do usuário
-    const noteElement = localStorage.getItem('note') === null ? localStorage.setItem('note') : localStorage.getItem('note')
+    const noteElement = localStorage.getItem('note') === null ? localStorage.setItem('note', '') : localStorage.getItem('note')
     const result = JSON.parse(noteElement);
-    document.getElementById('note').innerHTML= `${result}`;
+    document.getElementById('note').innerHTML= result;
 
     // Renderizar data
     const data = localStorage.getItem('date')
@@ -27,7 +30,8 @@ function renderNote() {
 
     // Botão editar 
     const button = localStorage.getItem('button')
-    document.getElementById("button-add").innerHTML = `${button}`
+
+    document.getElementById("button-add").innerHTML = button;
 }
 
 // essa função irá criar uma nova anotação
