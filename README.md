@@ -1,7 +1,9 @@
-# NoteApp
+<h1 align="center">:rocket: NoteApp </h1>
+
+## Descrição
 Aplicativo de anotações desenvolvido em html, css e javascript para praticar alguns conceitos que eu aprendi recentemente.
 
-<h3>Tecnologias</h3>
+## Tecnologias
 
 <h5>Front-end</h3>
 <ul>
@@ -12,4 +14,4 @@ Aplicativo de anotações desenvolvido em html, css e javascript para praticar a
 
 <h5>Teste a aplicação:</h5>
 
-* `https://Al3xsandro.github.io/NoteApp`
+- Demo: <a href="https://Al3xsandro.github.io/NoteApp">`URL`</a>
